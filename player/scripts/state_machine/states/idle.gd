@@ -17,6 +17,9 @@ func exit() -> void:
 	print("Exited Idle State")
 
 func handle_input(_event: InputEvent) -> PlayerState:
+	if _event.is_action_pressed("jump"):
+		return jump
+
 	return null
 
 

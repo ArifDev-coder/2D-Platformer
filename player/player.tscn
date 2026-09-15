@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://2q3vu5t4dtfy" path="res://player/scripts/state_machine/states/jump.gd" id="6_8t03j"]
 [ext_resource type="AudioStream" uid="uid://bhp2cdehb7u77" path="res://player/audio/skid.wav" id="6_hg6s5"]
 [ext_resource type="Script" uid="uid://da65uiuw25454" path="res://player/scripts/state_machine/states/fall.gd" id="7_2ieo8"]
+[ext_resource type="AudioStream" uid="uid://c2ge3net0ooub" path="res://player/audio/jump.wav" id="8_8t03j"]
 [ext_resource type="Script" uid="uid://db7txn06jgrxq" path="res://player/scripts/state_machine/states/crouch.gd" id="8_ebec5"]
 
 [sub_resource type="Animation" id="Animation_oul6g"]
@@ -173,6 +174,9 @@ skid_audio = ExtResource("6_hg6s5")
 [node name="Jump" type="Node2D" parent="PlayerStateMachine" unique_id=1501336383]
 unique_name_in_owner = true
 script = ExtResource("6_8t03j")
+jump_velocity = 400.0
+jump_audio = ExtResource("8_8t03j")
+acceleration = 20.0
 
 [node name="Fall" type="Node2D" parent="PlayerStateMachine" unique_id=199536664]
 unique_name_in_owner = true

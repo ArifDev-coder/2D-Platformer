@@ -1,7 +1,6 @@
 class_name Player extends CharacterBody2D
 
-
-@export var move_speed: float = 100.0
+var gravity_multiplier: float = 1.0
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
@@ -13,7 +12,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta * gravity_multiplier
 
 	move_and_slide()
 

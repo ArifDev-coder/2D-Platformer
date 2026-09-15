@@ -37,10 +37,12 @@ func exit() -> void:
 
 
 func handle_input(_event: InputEvent) -> PlayerState:
-	if Input.is_action_just_pressed("action"):
+	if _event.is_action_pressed("action"):
 		target_speed = sprint_speed
-	elif Input.is_action_just_released("action"):
+	elif _event.is_action_released("action"):
 		target_speed = speed
+	elif _event.is_action_pressed("jump"):
+		return jump
 
 	return null
 
