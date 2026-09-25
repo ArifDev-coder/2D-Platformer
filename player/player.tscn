@@ -181,6 +181,7 @@ acceleration = 20.0
 [node name="Fall" type="Node2D" parent="PlayerStateMachine" unique_id=199536664]
 unique_name_in_owner = true
 script = ExtResource("7_2ieo8")
+coyote_time = 1.0
 
 [node name="Crouch" type="Node2D" parent="PlayerStateMachine" unique_id=1256696120]
 unique_name_in_owner = true
