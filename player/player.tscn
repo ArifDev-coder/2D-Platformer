@@ -27,7 +27,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_yw30f"]
-resource_name = "cruch"
+resource_name = "crouch"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -122,7 +122,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yw30f"]
 _data = {
 &"RESET": SubResource("Animation_oul6g"),
-&"cruch": SubResource("Animation_yw30f"),
+&"crouch": SubResource("Animation_yw30f"),
 &"fall": SubResource("Animation_qjkh3"),
 &"idle": SubResource("Animation_rkbax"),
 &"jump": SubResource("Animation_g6k8r"),
@@ -132,6 +132,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_movaq"]
 size = Vector2(11.5, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8t03j"]
+size = Vector2(11.5, 13)
 
 [node name="Player" type="CharacterBody2D" unique_id=1957544147]
 collision_mask = 49
@@ -156,6 +159,12 @@ position = Vector2(0, -34.01)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=690264436]
 position = Vector2(-0.25, -11)
 shape = SubResource("RectangleShape2D_movaq")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="CollisionShape2D_Crouch" type="CollisionShape2D" parent="." unique_id=1574902082]
+position = Vector2(-0.25, -6.5)
+shape = SubResource("RectangleShape2D_8t03j")
+disabled = true
 debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="PlayerStateMachine" type="Node2D" parent="." unique_id=41564026]
@@ -184,3 +193,8 @@ script = ExtResource("7_hg6s5")
 [node name="Crouch" type="Node2D" parent="PlayerStateMachine" unique_id=1256696120]
 unique_name_in_owner = true
 script = ExtResource("8_rgyib")
+
+[node name="RayCast2D" type="RayCast2D" parent="PlayerStateMachine/Crouch" unique_id=1028476300]
+target_position = Vector2(0, 5)
+collision_mask = 32
+hit_from_inside = true

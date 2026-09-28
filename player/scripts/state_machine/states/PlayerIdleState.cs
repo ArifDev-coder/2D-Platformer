@@ -34,12 +34,7 @@ public partial class PlayerIdleState : PlayerState
 	}
 
 	public override PlayerState Process(float delta)
-	{	
-		if (Direction.X != 0)
-		{
-			return Run;
-		}
-
+	{
 		return null;
 	}
 
@@ -47,7 +42,15 @@ public partial class PlayerIdleState : PlayerState
 	{
 		Player.UpdateVelocity(0, Deceleration);
 
-		if (!Player.IsOnFloor())
+		if (Direction.X != 0)
+		{
+			return Run;
+		}
+		else if (Direction.Y > 0)
+		{
+			return Crouch;
+		}
+		else if (!Player.IsOnFloor())
 		{
 			return Fall;
 		}

@@ -82,6 +82,10 @@ public partial class PlayerRunState : PlayerState
 		{
 			return Idle;
 		}
+		else if (Direction.Y > 0)
+		{
+			return Crouch;
+		}
 		else if (Mathf.Sign(Direction.X) == Mathf.Sign(Player.Velocity.X) || Player.Velocity.X == 0)
 		{
 			CurrentAcceleration = Acceleration;
@@ -116,6 +120,6 @@ public partial class PlayerRunState : PlayerState
 		{
 			Player.AudioStreamPlayer.Stop();
 		}
-		
+
 	}
 }
