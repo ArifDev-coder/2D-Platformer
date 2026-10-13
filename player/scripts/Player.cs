@@ -26,6 +26,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+		// Add !IsOnFloor() to fix slop glitch
 		if (!IsOnFloor())
 		{
 			Velocity += GetGravity() * (float)delta * GravityMultiplier;
