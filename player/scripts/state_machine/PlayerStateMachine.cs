@@ -70,7 +70,6 @@ public partial class PlayerStateMachine : Node2D
 			GD.Print($"Resize Failed: {err}");
 		}
 
-		GD.Print($"Change State to {CurrentState}");
 	}
 
 	public void Init(Player player)
