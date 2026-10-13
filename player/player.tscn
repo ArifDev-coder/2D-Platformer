@@ -151,6 +151,7 @@ libraries/ = SubResource("AnimationLibrary_yw30f")
 autoplay = &"idle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1850443468]
+volume_db = -10.0
 max_polyphony = 4
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=444970557]
