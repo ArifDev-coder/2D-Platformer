@@ -22,7 +22,6 @@ public partial class PlayerCrouchState : PlayerState
 
 	public override void Enter()
 	{
-		GD.Print("Entered Crouch State");
 		Player.AnimPlayer.Play("crouch");
 
 		CollisionShape2D.Disabled = true;
@@ -32,8 +31,6 @@ public partial class PlayerCrouchState : PlayerState
 
 	public override void Exit()
 	{
-		GD.Print("Exited Crouch State");
-
 		CollisionShape2D.Disabled = false;
 		CollisionShape2DCrouch.Disabled = true;
 		RayCast2D.Enabled = false;

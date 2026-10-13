@@ -23,7 +23,6 @@ public partial class PlayerRunState : PlayerState
 
 	public override void Enter()
 	{
-		GD.Print("Entered Run State");
 		Player.AnimPlayer.Play("run");
 
 		CurrentAcceleration = Acceleration;
@@ -40,8 +39,6 @@ public partial class PlayerRunState : PlayerState
 
 	public override void Exit()
 	{
-		GD.Print("Exited Run State");
-
 		Player.AnimPlayer.CurrentAnimationChanged -= OnAnimationChanged;
 		Player.AudioStreamPlayer.Stop();
 

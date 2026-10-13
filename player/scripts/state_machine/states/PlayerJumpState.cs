@@ -20,7 +20,6 @@ public partial class PlayerJumpState : PlayerState
 
 	public override void Enter()
 	{
-		GD.Print("Entered Jump State");
 		Player.AnimPlayer.Play("jump");
 
 		Player.GlobalPosition = new Vector2(Player.GlobalPosition.X, Player.GlobalPosition.Y - 1);
@@ -34,7 +33,6 @@ public partial class PlayerJumpState : PlayerState
 
 	public override void Exit()
 	{
-		GD.Print("Exited Jump State");
 	}
 
 	public override PlayerState HandleInput(InputEvent inputEvent)

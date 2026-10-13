@@ -14,13 +14,11 @@ public partial class PlayerIdleState : PlayerState
 
 	public override void Enter()
 	{
-		GD.Print("Entered Idle State");
 		Player.AnimPlayer.Play("idle");
 	}
 
 	public override void Exit()
 	{
-		GD.Print("Exited Idle State");
 	}
 
 	public override PlayerState HandleInput(InputEvent inputEvent)

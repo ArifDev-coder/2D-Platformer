@@ -21,7 +21,6 @@ public partial class PlayerFallState : PlayerState
 
 	public override void Enter()
 	{
-		GD.Print("Entered Fall State");
 		Player.AnimPlayer.Play("fall");
 
 		MoveSpeed = MathF.Max(BaseMovementSpeed, MathF.Abs(Player.Velocity.X));
@@ -37,8 +36,6 @@ public partial class PlayerFallState : PlayerState
 
 	public override void Exit()
 	{
-		GD.Print("Exited Fall State");
-
 		Player.GravityMultiplier = 1f;
 	}
 

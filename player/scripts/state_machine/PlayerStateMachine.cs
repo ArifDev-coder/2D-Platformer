@@ -102,7 +102,9 @@ public partial class PlayerStateMachine : Node2D
 		}
 
 		ChangeState(CurrentState.Crouch);
-		ChangeState(PreviousState.Idle);
+		// ChangeState(PreviousState.Idle);
+
+		CurrentState.Enter();
 
 		ProcessMode = ProcessModeEnum.Inherit;
 	}
