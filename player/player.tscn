@@ -156,6 +156,9 @@ max_polyphony = 4
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=444970557]
 position = Vector2(0, -34.01)
+zoom = Vector2(0.7, 0.7)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=690264436]
 position = Vector2(-0.25, -11)
@@ -184,8 +187,9 @@ SkidAudio = ExtResource("6_8t03j")
 [node name="Jump" type="Node2D" parent="PlayerStateMachine" unique_id=1501336383]
 unique_name_in_owner = true
 script = ExtResource("6_rgyib")
+JumpVelocity = 400.0
 JumpAudio = ExtResource("8_2ieo8")
-Acceleration = 20.0
+Acceleration = 5.0
 
 [node name="Fall" type="Node2D" parent="PlayerStateMachine" unique_id=199536664]
 unique_name_in_owner = true
