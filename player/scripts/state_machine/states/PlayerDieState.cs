@@ -8,6 +8,7 @@ public partial class PlayerDieState : PlayerState
 	[Export] public float FreezeTime = .4f;
 	[Export] public float PopForce = -350f;
 	[Export] public float TotalTime = 2f;
+	[Export] public AudioStream DieAudio { get; set; }
 
 	private float _timer;
 	private float _elapsed;
@@ -27,8 +28,12 @@ public partial class PlayerDieState : PlayerState
 
 		Player.Velocity = Vector2.Zero;
 
-		Player.AnimPlayer.Play("run");
+		Player.PlayAudio(DieAudio);
+		Player.AudioStreamPlayer.VolumeDb = 10;
+
+		Player.AnimPlayer.Play("fall");
 		Player.AnimPlayer.Pause();
+
 
 		Player.GetNode<CollisionShape2D>("CollisionShape2D").SetDeferred("disabled", true);
 

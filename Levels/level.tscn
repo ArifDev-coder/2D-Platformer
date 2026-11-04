@@ -52,3 +52,63 @@ texture = SubResource("GradientTexture2D_movaq")
 position = Vector2(-123, 70)
 collision_layer = 0
 collision_mask = 16
+
+[node name="Enemy2" parent="Enemies" unique_id=1543386204 instance=ExtResource("3_uhyyw")]
+position = Vector2(1385, 51)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy3" parent="Enemies" unique_id=692456169 instance=ExtResource("3_uhyyw")]
+position = Vector2(1083, 53)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy4" parent="Enemies" unique_id=1129390842 instance=ExtResource("3_uhyyw")]
+position = Vector2(733, 23)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy5" parent="Enemies" unique_id=908275716 instance=ExtResource("3_uhyyw")]
+position = Vector2(655, -69)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy6" parent="Enemies" unique_id=1044725676 instance=ExtResource("3_uhyyw")]
+position = Vector2(485, -101)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy7" parent="Enemies" unique_id=929546569 instance=ExtResource("3_uhyyw")]
+position = Vector2(230, -49)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy8" parent="Enemies" unique_id=368189504 instance=ExtResource("3_uhyyw")]
+position = Vector2(358, 106)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy9" parent="Enemies" unique_id=1027888140 instance=ExtResource("3_uhyyw")]
+position = Vector2(1739, 53)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy10" parent="Enemies" unique_id=823814067 instance=ExtResource("3_uhyyw")]
+position = Vector2(2079, 57)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy11" parent="Enemies" unique_id=585029309 instance=ExtResource("3_uhyyw")]
+position = Vector2(2334, 32)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy12" parent="Enemies" unique_id=2072829088 instance=ExtResource("3_uhyyw")]
+position = Vector2(2599, 45)
+collision_layer = 0
+collision_mask = 16
+
+[node name="Enemy13" parent="Enemies" unique_id=2053772622 instance=ExtResource("3_uhyyw")]
+position = Vector2(3013, 42)
+collision_layer = 0
+collision_mask = 16

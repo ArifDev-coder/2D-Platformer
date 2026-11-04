@@ -28,6 +28,7 @@ public partial class PlayerJumpState : PlayerState
 
 		Player.Velocity = new Vector2(Player.Velocity.X, -JumpVelocity);
 
+		Player.AudioStreamPlayer.VolumeDb = -10f;
 		Player.PlayAudio(JumpAudio);
 	}
 

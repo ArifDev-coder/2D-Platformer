@@ -23,6 +23,7 @@ public partial class PlayerRunState : PlayerState
 
 	public override void Enter()
 	{
+		Player.AudioStreamPlayer.VolumeDb = 0f;
 		Player.AnimPlayer.Play("run");
 
 		CurrentAcceleration = Acceleration;
