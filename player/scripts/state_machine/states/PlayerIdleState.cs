@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace Player.StateMachine.States;
+namespace PlayerNode.StateMachine.States;
 
 public partial class PlayerIdleState : PlayerState
 {

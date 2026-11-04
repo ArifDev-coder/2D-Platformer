@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bmxcvlqu5u3fw" path="res://player/scripts/state_machine/states/PlayerFallState.cs" id="7_hg6s5"]
 [ext_resource type="AudioStream" uid="uid://c2ge3net0ooub" path="res://player/audio/jump.wav" id="8_2ieo8"]
 [ext_resource type="Script" uid="uid://dfgpoki3rxs30" path="res://player/scripts/state_machine/states/PlayerCrouchState.cs" id="8_rgyib"]
+[ext_resource type="Script" uid="uid://kmatbko1gayh" path="res://player/scripts/state_machine/states/PlayerDieState.cs" id="11_2ieo8"]
 
 [sub_resource type="Animation" id="Animation_oul6g"]
 length = 0.001
@@ -203,3 +204,7 @@ script = ExtResource("8_rgyib")
 target_position = Vector2(0, 5)
 collision_mask = 32
 hit_from_inside = true
+
+[node name="Die" type="Node2D" parent="PlayerStateMachine" unique_id=806261839]
+unique_name_in_owner = true
+script = ExtResource("11_2ieo8")

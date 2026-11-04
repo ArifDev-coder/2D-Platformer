@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dim343fyvj8m"]
+
+[ext_resource type="Script" uid="uid://lnqlglndwgeh" path="res://GlobalScripts/Main.cs" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cgamieb0i5n3x" path="res://Levels/level.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=561313149 node_paths=PackedStringArray("Level")]
+script = ExtResource("1_0xm2m")
+Level = NodePath("Level")
+
+[node name="Level" parent="." unique_id=743750993 instance=ExtResource("1_ig7tw")]

@@ -1,8 +1,9 @@
 using Godot;
-using Player.StateMachine;
+using PlayerNode.StateMachine;
 using System;
+using PlayerNode.StateMachine.States;
 
-namespace Player;
+namespace PlayerNode;
 
 public partial class Player : CharacterBody2D
 {
@@ -12,6 +13,8 @@ public partial class Player : CharacterBody2D
 	public AnimationPlayer AnimPlayer { get; set; }
 	public AudioStreamPlayer2D AudioStreamPlayer { get; set; }
 	public PlayerStateMachine PlayerStateMachine { get; set; }
+
+
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -70,5 +73,10 @@ public partial class Player : CharacterBody2D
 				Sprite.Scale.Y
 			);
 		}
+	}
+
+	public void PlayerDie()
+	{
+		PlayerStateMachine.ChangeState(PlayerStateMachine.CurrentState.Die);
 	}
 }

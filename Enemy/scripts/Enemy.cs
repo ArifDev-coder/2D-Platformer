@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-namespace Enemy;
+namespace EnemyNode;
 
 public partial class Enemy : CharacterBody2D
 {
-	[Signal] public delegate void PlayerDiedEventHandler();
+	[Signal] public delegate void PlayerDiedEventHandler(Node2D body);
 
 	[Export] public float Speed { get; set; } = 10.0f;
 	[Export] public float Direction { get; set; } = -1f;
@@ -58,9 +58,7 @@ public partial class Enemy : CharacterBody2D
 	{
 		if (body.Name == "Player")
 		{
-			EmitSignal(SignalName.PlayerDied, body);
-
-			GD.Print(SignalName.PlayerDied);
+			EmitSignal("PlayerDied", body);
 		}
 
 	}

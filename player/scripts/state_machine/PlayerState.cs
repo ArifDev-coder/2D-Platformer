@@ -1,8 +1,8 @@
 using Godot;
-using Player.StateMachine.States;
+using PlayerNode.StateMachine.States;
 using System;
 
-namespace Player.StateMachine;
+namespace PlayerNode.StateMachine;
 
 public partial class PlayerState : Node2D
 {
@@ -15,6 +15,7 @@ public partial class PlayerState : Node2D
 	public PlayerJumpState Jump { get; set; }
 	public PlayerFallState Fall { get; set; }
 	public PlayerCrouchState Crouch { get; set; }
+	public PlayerDieState Die { get; set; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -24,6 +25,7 @@ public partial class PlayerState : Node2D
 		Jump = GetNode<PlayerJumpState>("%Jump");
 		Fall = GetNode<PlayerFallState>("%Fall");
 		Crouch = GetNode<PlayerCrouchState>("%Crouch");
+		Die = GetNode<PlayerDieState>("%Die");
 	}
 
 	public virtual void Init()

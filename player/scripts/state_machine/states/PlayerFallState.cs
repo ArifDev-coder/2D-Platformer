@@ -1,8 +1,8 @@
 using Godot;
 using System;
-using Player.StateMachine;
+using PlayerNode.StateMachine;
 
-namespace Player.StateMachine.States;
+namespace PlayerNode.StateMachine.States;
 
 public partial class PlayerFallState : PlayerState
 {

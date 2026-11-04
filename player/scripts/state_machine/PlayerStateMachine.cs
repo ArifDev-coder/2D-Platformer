@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
-using Player.StateMachine.States;
+using PlayerNode.StateMachine.States;
 using System;
 
-namespace Player.StateMachine;
+namespace PlayerNode.StateMachine;
 
 [Icon("res://player/sprites/icon_state_machine_16x16.png")]
 public partial class PlayerStateMachine : Node2D
@@ -107,4 +107,5 @@ public partial class PlayerStateMachine : Node2D
 
 		ProcessMode = ProcessModeEnum.Inherit;
 	}
+
 }
