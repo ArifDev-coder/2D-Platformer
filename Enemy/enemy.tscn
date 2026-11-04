@@ -9,7 +9,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Animation/Walk:frame")
+tracks/0/path = NodePath("Sprite/Walk:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -21,7 +21,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Animation/Walk:visible")
+tracks/1/path = NodePath("Sprite/Walk:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -33,7 +33,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Animation/Idle:visible")
+tracks/2/path = NodePath("Sprite/Idle:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -45,7 +45,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Animation/Walk:flip_h")
+tracks/3/path = NodePath("Sprite/Walk:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -61,7 +61,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Animation/Walk:frame")
+tracks/0/path = NodePath("Sprite/Walk:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -73,7 +73,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Animation/Walk:visible")
+tracks/1/path = NodePath("Sprite/Walk:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -85,7 +85,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Animation/Idle:visible")
+tracks/2/path = NodePath("Sprite/Idle:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -97,7 +97,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Animation/Walk:flip_h")
+tracks/3/path = NodePath("Sprite/Walk:flip_h")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -105,65 +105,12 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_eqilm"]
-resource_name = "Walk_flip"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Animation/Walk:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Animation/Walk:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Animation/Idle:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Animation/Walk:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(-0.033333335, 0),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_am0pq"]
 _data = {
 &"RESET": SubResource("Animation_am0pq"),
-&"Walk": SubResource("Animation_px1sc"),
-&"Walk_flip": SubResource("Animation_eqilm")
+&"Walk": SubResource("Animation_px1sc")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am0pq"]
@@ -176,35 +123,48 @@ size = Vector2(20.25, 5.5)
 script = ExtResource("1_am0pq")
 Speed = 25.0
 
-[node name="Animation" type="Node2D" parent="." unique_id=1711694829]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=995233437]
+scale = Vector2(-1, 1)
 
-[node name="Walk" type="Sprite2D" parent="Animation" unique_id=39747145]
+[node name="Walk" type="Sprite2D" parent="Sprite" unique_id=39747145]
 visible = false
 position = Vector2(-2.3841858e-07, -21)
 scale = Vector2(0.894, 1.319)
 texture = ExtResource("1_2pb1h")
 hframes = 6
 
-[node name="Idle" type="Sprite2D" parent="Animation" unique_id=2031668185]
+[node name="Idle" type="Sprite2D" parent="Sprite" unique_id=2031668185]
 position = Vector2(-2.3841858e-07, -21)
 scale = Vector2(0.894, 1.319)
 texture = ExtResource("2_px1sc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation" unique_id=960774047]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=960774047]
 libraries/ = SubResource("AnimationLibrary_am0pq")
 autoplay = &"Walk"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1627199517]
-position = Vector2(-0.75, -6.75)
-shape = SubResource("RectangleShape2D_am0pq")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1796291499]
-position = Vector2(1.875, -14)
-shape = SubResource("RectangleShape2D_eqilm")
 
 [node name="Timer" type="Timer" parent="." unique_id=188351743]
 wait_time = 2.0
 autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669501608]
+position = Vector2(-0.75, -6.75)
+shape = SubResource("RectangleShape2D_am0pq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1370112475]
+position = Vector2(1.875, -14)
+shape = SubResource("RectangleShape2D_eqilm")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1605561581]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1627199517]
+position = Vector2(-0.75, -6.75)
+shape = SubResource("RectangleShape2D_am0pq")
+debug_color = Color(0.43529412, 0.6, 0, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1796291499]
+position = Vector2(1.875, -14)
+shape = SubResource("RectangleShape2D_eqilm")
+debug_color = Color(0.4339932, 0.60082895, 0, 0.41960785)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

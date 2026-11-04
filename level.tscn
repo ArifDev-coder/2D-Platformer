@@ -50,4 +50,5 @@ texture = SubResource("GradientTexture2D_movaq")
 
 [node name="Enemy" parent="Enemies" unique_id=1053631562 instance=ExtResource("3_oi3di")]
 position = Vector2(-123, 70)
+collision_layer = 0
 collision_mask = 16
