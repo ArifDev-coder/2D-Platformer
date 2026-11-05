@@ -8,3 +8,4 @@ script = ExtResource("1_0xm2m")
 Level = NodePath("Level")
 
 [node name="Level" parent="." unique_id=743750993 instance=ExtResource("1_ig7tw")]
+position = Vector2(1090, 161)
